@@ -7,7 +7,7 @@
 class vec3
 {
 public:
-    double x, y, z;
+    double x = 0.0, y = 0.0, z = 0.0;
 
     vec3() {}
     vec3(double x, double y, double z) : x(x), y(y), z(z) {}

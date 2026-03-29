@@ -7,6 +7,7 @@ public:
     int status;
 
     material() {}
+    material(material *other) {}
 
 private:
 };
