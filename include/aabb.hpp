@@ -6,6 +6,7 @@
 #include <vector>
 
 #include <vec3.hpp>
+#include <vec4.hpp>
 #include <primitive.hpp>
 #include <ray.hpp>
 

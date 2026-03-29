@@ -10,6 +10,9 @@
 class primitive
 {
 public:
+    triangle tri;
+    material *mat; // material may be shared by many triangles!
+                   // no need to have that much redundant memory
     primitive() {}
     primitive(triangle tri, material *mat) : tri(tri), mat(mat) {}
     primitive(primitive &other)
@@ -21,9 +24,6 @@ public:
     intersection intersect(ray r);
 
 private:
-    triangle tri;
-    material *mat; // material may be shared by many triangles!
-                   // no need to have that much redundant memory
 };
 
 #endif
