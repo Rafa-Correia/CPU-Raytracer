@@ -4,7 +4,7 @@
 class material
 {
 public:
-    int status;
+    int status = 0;
 
     material() {}
     material(material *other) {}
@@ -12,4 +12,4 @@ public:
 private:
 };
 
-#endif MATERIAL_HPP
+#endif

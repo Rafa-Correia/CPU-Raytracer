@@ -10,15 +10,15 @@
 class primitive
 {
 public:
-    triangle tri;
-    material *mat; // material may be shared by many triangles!
-                   // no need to have that much redundant memory
+    triangle tri = triangle();
+    material *mat = NULL; // material may be shared by many triangles!
+                          // no need to have that much redundant memory
     primitive() {}
     primitive(triangle tri, material *mat) : tri(tri), mat(mat) {}
-    primitive(primitive &other)
+    primitive(const primitive &other)
     {
         this->tri = triangle(other.tri);
-        this->mat = new material(other.mat);
+        this->mat = other.mat;
     }
 
     intersection intersect(ray r);

@@ -17,17 +17,21 @@ typedef struct ray_info_
 class camera
 {
 public:
+    int width,
+        height;
+
     camera() {}
-    camera(int width, int height, vec3 pos, vec3 dir) : width(width), height(height), position(pos), direction(dir) {}
+    camera(int width, int height, double fov, vec3 pos, vec3 dir) : width(width), height(height), fov(fov), position(pos), direction(vec3::normalize(dir)) {}
 
     std::vector<ray_info> get_rays();
 
 private:
+    double fov; // horizontal fov
+
     vec3 position;
     vec3 direction;
 
-    int width,
-        height;
+    vec3 up = vec3(0.0, 1.0, 0.0);
 };
 
 #endif

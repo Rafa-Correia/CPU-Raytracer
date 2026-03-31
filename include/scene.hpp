@@ -23,7 +23,7 @@ private:
         objects;
     camera cam;
 
-    vec3 trace(ray &r);
+    rgb trace(ray &r);
 };
 
 #endif

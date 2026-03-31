@@ -6,6 +6,19 @@ void object::add_primitive(primitive &prim)
     this->bounds.inflate(prim);
 }
 
+void object::update_bounds()
+{
+    // if (this->geometry.empty())
+    //     return;
+    //
+    // vec
+    //
+    // for (primitive &prim : this->geometry)
+    // {
+    //
+    // }
+}
+
 intersection object::intersect(ray &r)
 {
     // intersection i;

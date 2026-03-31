@@ -5,19 +5,20 @@
 #include <string>
 #include <vector>
 
-#include <vec3.hpp>
+#include <rgb.hpp>
 
 class image
 {
 public:
-    image();
+    image() = delete;
+    image(int width, int height) : width(width), height(height) { color_data.reserve(width * height); }
 
-    void fill(int x, int y, vec3 col);
+    void fill(int x, int y, rgb col);
 
     void to_png(const char *path);
 
 private:
-    std::vector<vec3> color_data;
+    std::vector<rgb> color_data;
     int width,
         height;
 };

@@ -18,9 +18,14 @@ public:
 
     bool intersect(ray &r);
 
+    // deprecated
     void inflate(primitive &prim);
 
+    void update_bounds();
+
 private:
+    vec3 position;
+
     vec3 lower_bounds;
     vec3 upper_bounds;
 };

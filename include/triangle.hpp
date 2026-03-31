@@ -15,4 +15,4 @@ public:
 private:
 };
 
-#endif TRIANGLE_HPP
+#endif
